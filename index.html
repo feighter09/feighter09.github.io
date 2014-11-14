@@ -103,7 +103,7 @@
           <h5>ABOUT</h5>
         </div>
         <div class="col-lg-7">
-          <p>I'm an avid hacker and constant inquirer, looking for something challenging to work on. Always working on something, I've built apps on iOS, Android, Glass,Oculus, Mac, Rails and Django. Currently I'm tinkering with Arduinos, Raspberry Pis, and Spark cores to automate my room. I've taken classes on operating systems, security, web information systems, artificial intelligence, and machine learning. I do a lot of work with mobile, particularly iOS even though I rock an HTC One. </p>
+          <p>I'm an avid hacker and constant inquirer, looking for something challenging to work on. Always working on something, I've built apps on iOS, Android, Glass, Oculus, Mac, Rails and Django. Currently I'm tinkering with Arduinos, Raspberry Pis, and Spark cores to automate my room. I've taken classes on operating systems, security, web information systems, artificial intelligence, and machine learning. I do a lot of work with mobile, particularly iOS even though I rock an HTC One. </p>
         </div>
         <div class="col-lg-3">
           <p><a href="/ResumeF14.pdf"><i class="icon-file"></i><sm>DOWNLOAD PDF</sm></a></p>
@@ -268,7 +268,7 @@
           </div>
           <div class="col-lg-3 centered">
             <canvas id="javascript" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>JavaScript</p>
+            <p>HTML, JavaScript, CSS</p>
             <br>
             <script>
               var doughnutData = [
@@ -284,8 +284,25 @@
                 var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
             </script>
           </div>
-          
           <div class="col-lg-3 col-lg-offset-2 centered">
+            <canvas id="swift" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
+              <p>Swift / iOS</p>
+              <br>
+              <script>
+                var doughnutData = [
+                  {
+                    value: 65,
+                    color:"#1abc9c"
+                  },
+                  {
+                    value : 35,
+                    color : "#ecf0f1"
+                  }
+                ];
+                var myDoughnut = new Chart(document.getElementById("swift").getContext("2d")).Doughnut(doughnutData);
+            </script>
+          </div>
+          <div class="col-lg-3 centered">
             <canvas id="android" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
               <p>Android</p>
               <br>
@@ -304,8 +321,8 @@
             </script>
           </div>
           <div class="col-lg-3 centered">
-            <canvas id="ruby_sinatra" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>Python</p>
+            <canvas id="python" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
+            <p>Python: Django / Flask</p>
             <br>
             <script>
               var doughnutData = [
@@ -318,28 +335,28 @@
                     color : "#ecf0f1"
                   }
                 ];
-                var myDoughnut = new Chart(document.getElementById("ruby_sinatra").getContext("2d")).Doughnut(doughnutData);
-            </script>
-          </div>
-          <div class="col-lg-3 centered">
-            <canvas id="rails" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>Rails</p>
-            <br>
-            <script>
-              var doughnutData = [
-                  {
-                    value: 50,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 50,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("rails").getContext("2d")).Doughnut(doughnutData);
+                var myDoughnut = new Chart(document.getElementById("python").getContext("2d")).Doughnut(doughnutData);
             </script>
           </div>
           <div class="col-lg-3 col-lg-offset-2 centered">
+            <canvas id="ruby" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
+            <p>Ruby: Rails / Sinatra</p>
+            <br>
+            <script>
+              var doughnutData = [
+                  {
+                    value: 50,
+                    color:"#1abc9c"
+                  },
+                  {
+                    value : 50,
+                    color : "#ecf0f1"
+                  }
+                ];
+                var myDoughnut = new Chart(document.getElementById("ruby").getContext("2d")).Doughnut(doughnutData);
+            </script>
+          </div>
+          <div class="col-lg-3 centered">
             <canvas id="haskell" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
             <p>Haskell</p>
             <br>
