@@ -318,3 +318,7 @@ sm {
     max-width: 90%;
   }
 }
+
+#clapperDemo {
+  width: 100%;
+}
