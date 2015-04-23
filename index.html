@@ -237,173 +237,102 @@
   <div id="skillswrap">
     <div class="container">
       <div class="row">
-          <div class="col-lg-2 centered">
-            <h5>SKILLS</h5><br/>
-            <h6 id="skillsTag">(By recency of use / work)</h6>
-          </div>
-          <div class="col-lg-3 centered">
-            <canvas id="swift" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-              <p>Swift / iOS</p>
-              <br>
-              <script>
-                var doughnutData = [
-                  {
-                    value: 75,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 25,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("swift").getContext("2d")).Doughnut(doughnutData);
-            </script>            
-          </div>
-          <div class="col-lg-3 centered">
-            <canvas id="iOS" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>Objective-C / iOS</p>
-            <br>
-            <script>
-              var doughnutData = [
-                  {
-                    value: 80,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 20,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("iOS").getContext("2d")).Doughnut(doughnutData);
-            </script>            
-          </div>
-          <div class="col-lg-3 centered">
-            <canvas id="cplusplus" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>C/C++</p>
-            <br>
-            <script>
-              var doughnutData = [
-                  {
-                    value: 90,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 10,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("cplusplus").getContext("2d")).Doughnut(doughnutData);
-            </script>            
-          </div>
-          <div class="col-lg-3 col-lg-offset-2 centered">
-            <canvas id="arduino" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>Arduino</p>
-            <br>
-            <script>
-              var doughnutData = [
-                  {
-                    value: 60,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 40,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("arduino").getContext("2d")).Doughnut(doughnutData);
-            </script>
-          </div>
-          <div class="col-lg-3 centered">
-            <canvas id="javascript" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>HTML, JavaScript, CSS</p>
-            <br>
-            <script>
-              var doughnutData = [
-                  {
-                    value: 75,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 25,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
-            </script>
-          </div>
-          <div class="col-lg-3 centered">
-            <canvas id="android" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-              <p>Android</p>
-              <br>
-              <script>
-                var doughnutData = [
-                  {
-                    value: 65,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 35,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("android").getContext("2d")).Doughnut(doughnutData);
-            </script>
-          </div>
-          <div class="col-lg-3 col-lg-offset-2 centered">
-            <canvas id="python" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>Python: Django / Flask</p>
-            <br>
-            <script>
-              var doughnutData = [
-                  {
-                    value: 50,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 50,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("python").getContext("2d")).Doughnut(doughnutData);
-            </script>
-          </div>
-          <div class="col-lg-3 centered">
-            <canvas id="ruby" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>Ruby: Rails / Sinatra</p>
-            <br>
-            <script>
-              var doughnutData = [
-                  {
-                    value: 50,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 50,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("ruby").getContext("2d")).Doughnut(doughnutData);
-            </script>
-          </div>
-          <div class="col-lg-3 centered">
-            <canvas id="haskell" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
-            <p>Haskell</p>
-            <br>
-            <script>
-              var doughnutData = [
-                  {
-                    value: 15,
-                    color:"#1abc9c"
-                  },
-                  {
-                    value : 85,
-                    color : "#ecf0f1"
-                  }
-                ];
-                var myDoughnut = new Chart(document.getElementById("haskell").getContext("2d")).Doughnut(doughnutData);
-            </script>
-          </div>
+        <div class="col-lg-2">
+          <h5>SKILLS / TECHNOLOGIES</h5><br/>
+        </div>
+        <div class="col-lg-3 centered skillHeading">
+          <h4>READY TO GO</h4>
+        </div>
+        <div class="col-lg-3 centered skillHeading">
+          <h4>GIVE ME A SEC</h4>
+        </div>
+        <div class="col-lg-3 centered skillHeading">
+          <h4>JUST MESSIN' AROUND</h4>
+        </div>
+        <div class="col-lg-3 centered skillList">
+          <ul>
+            <li>iOS: Swift</li>
+            <li>iOS: Objective-C</li>
+            <li>C++</li>
+            <li>HTML, CSS, JavaScript</li>
+          </ul>          
+        </div>
+        <div class="col-lg-3 centered skillList">
+          <ul>
+            <li>Android</li>
+            <li>Arduino</li> 
+            <li>Ruby: Rails</li>
+            <li>Ruby: Sinatra</li>
+            <li>Python: Django</li>
+            <li>Python: Flask</li>
+          </ul>  
+        </div>
+        <div class="col-lg-3 centered skillList">
+          <ul>
+            <li>Haskell</li>
+            <li>Virtual Reality: Oculus</li>
+            <li>Augmented Reality: Meta, Glass</li>
+            <li>Lasers</li>
+            <li>Hardware (Microwaves?)</li>
+            <li>3D Printing</li>
+          </ul>          
+        </div>
       </div><!--/.row -->
+
+      <!-- <div class="row",>
+        <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['timeline']}]}"></script>        
+        <div id="timeline"></div>
+        <script type="text/javascript">
+          google.setOnLoadCallback(drawChart);
+
+          function drawChart() {
+            var container = document.getElementById('timeline');
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+
+            dataTable.addColumn({ type: 'string', id: 'Language / Framework' });
+            dataTable.addColumn({ type: 'string', id: 'Capacity' });
+            dataTable.addColumn({ type: 'date', id: 'Start' });
+            dataTable.addColumn({ type: 'date', id: 'End' });
+
+            dataTable.addRows([
+              [ 'C++', 'ENGR 151: Advanced Intro to Engineering', new Date(2011, 8, 1), new Date(2011, 11, 22)],
+              [ 'C++', 'EECS 280: Programming & Data Structures', new Date(2012, 0, 4), new Date(2012, 3, 21)],
+              [ 'C++', 'EECS 281: Data Structures & Algorithms', new Date(2012, 8, 1), new Date(2012, 11, 22)],
+              [ 'C++', 'EECS 370: Intro Computer Organization', new Date(2012, 8, 1), new Date(2012, 11, 22)],
+              [ 'C++', 'EECS 482: Intro to Operating Systems', new Date(2013, 0, 9), new Date(2013, 3, 23)],
+              [ 'C++', 'EECS 381: Advanced Object Oriented Programming', new Date(2015, 0, 7), new Date(2015, 3, 21)],
+              [ 'iOS: Objective-C', 'Detroit Labs', new Date(2013, 4, 7), new Date(2013, 8, 1) ],
+              [ 'iOS: Objective-C', 'What I Like About You', new Date(2013, 11, 23), new Date(2014, 0, 16) ],
+              [ 'iOS: Objective-C', 'SnapShots (HackTech W14)', new Date(2014, 0, 24), new Date(2014, 0, 26) ],
+              [ 'iOS: Objective-C', 'Picture Perfect (PennApps W14)', new Date(2014, 1, 25), new Date(2014, 1, 27) ],
+              [ 'iOS: Objective-C', 'Concert Chat', new Date(2014, 5, 24), new Date(2014, 8, 1) ],
+              [ 'iOS: Objective-C', 'Facebook Messenger', new Date(2014, 5, 1), new Date(2014, 8, 1) ],
+              [ 'iOS: Swift', 'Ulyngo', new Date(2014, 11, 26),  new Date() ],
+              [ 'Android', 'Frapptastic', new Date(2013, 2, 0), new Date(2013, 6, 1) ],
+              [ 'Android', 'Sudoku Solver', new Date(2012, 11, 20), new Date(2013, 0, 15) ],
+              [ 'Android', 'Quarto', new Date(2014, 3, 20), new Date(2014, 4, 22) ],
+              [ 'Android', 'Save my Glass (MHacks F13)', new Date(2013, 8, 20), new Date(2013, 8, 22) ],
+              [ 'Android', 'P-Bomb', new Date(2013, 11, 29), new Date(2014, 0, 14) ],
+              [ 'Python: Django / Flask', 'MealJet', new Date(2014, 8, 1), new Date(2014, 11, 10)],
+              [ 'Python: Django / Flask', 'JamR (HackMIT F13)', new Date(2013, 9, 4), new Date(2013, 9, 6)],
+              [ 'Python: Django / Flask', 'EECS 485: Web Information Systems', new Date(2013, 9, 4), new Date(2013, 9, 6)],
+              [ 'Python: Django / Flask', 'calenGrab (Y-hack F13)', new Date(2013, 10, 9), new Date(2013, 10, 11)],
+              [ 'Ruby: Rails / Sinatra', 'Detroit Labs', new Date(2013, 4, 7), new Date(2013, 8, 1) ],
+              [ 'Ruby: Rails / Sinatra', 'Frapptastic', new Date(2013, 6, 5), new Date(2013, 10, 18) ],
+              [ 'HTML, CSS, JavaScript', 'Marvel Technologies, Inc', new Date(2012, 4, 1), new Date(2012, 8, 1)],
+              [ 'HTML, CSS, JavaScript', 'Nomad (BoilerMake W14)', new Date(2014, 1, 8), new Date(2014, 1, 11)],
+              [ 'HTML, CSS, JavaScript', 'SoundCloud Pro', new Date(2014, 10, 30), new Date(2014, 11, 16)]
+            ]);
+            chart.draw(dataTable);
+          }
+        </script>
+      </div> -->
+
+
+
+
+
       <br>
     </div><!--/.container -->
   </div><!--/ #skillswrap -->
