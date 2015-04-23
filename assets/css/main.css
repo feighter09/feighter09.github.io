@@ -335,3 +335,9 @@ sm {
 #saveMyGlassCaption {
   text-align: center;
 }
+
+#skillsTag {
+  color: white;
+  padding: 0px;
+  margin-top: -25px;
+}
