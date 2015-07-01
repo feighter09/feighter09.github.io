@@ -223,6 +223,30 @@ a:after {
 	vertical-align: middle;
 }
 
+#experience {
+  background: #2c3e50;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+}
+
+#experience h5 {
+  color: white;
+}
+
+#experience imp {
+  padding: 6px;
+  color: white;
+  background: #34495e;
+}
+
+#experience t {
+  font-weight: 700;
+}
+
+#experience c {
+  font-weight: 500;  
+}
 
 #skillswrap {
 	background: #2c3e50;
@@ -358,4 +382,11 @@ sm {
 }
 /*div:first-child > svg > g > text {
   fill: white;
+}*/
+
+/*#classesTaken {
+  padding-left: 0px;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }*/
