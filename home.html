@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="alternate" href="android-app://com.chexology.nikedeeplinkdemo/nikedeeplinkdemo/home" />
+  <script type="text/javascript">
+    
+    var link = "nikedeeplinkdemo://home";
+    var fallback = ""
+    
+    window.onload = loadPage;
+
+    function loadPage() 
+    {
+      if (iOSUserAgent()) {
+        handleiOSRedirect();
+      }
+      else if (fuckingChromeUserAgent()) {
+        handleAndroidChromeRedirect();
+      }
+      else {
+        handleAndroidStandardRedirect();
+      }
+    }
+
+    function handleiOSRedirect()
+    {
+      document.getElementById("errorMessage").style.display = "block";
+
+      if (getCookie("iOSNoApp") === "yes") {
+        setCookie("iOSNoApp", "", 0);
+        skipToAppStore();
+        return;
+      }
+
+      var openFallback = (function() {
+        setCookie("iOSNoApp", "yes", 1);
+        window.location.reload(true);
+      });
+
+      try {
+        document.location = link;
+      } 
+      catch(err) {
+        openFallback();
+      }
+      
+      setTimeout(openFallback, 4000);
+    }
+
+    function handleAndroidChromeRedirect()
+    {
+      var package = "com.chexology.nikedeeplinkdemo";
+      var scheme = "nikedeeplinkdemo";
+      var fallback = "https://play.google.com/store/apps/details?id=com.nike.plusgps"
+      var encodedFallback = encodeURIComponent(fallback);
+
+      var deeplink = "intent://home/#Intent;scheme=" + scheme 
+                     + ";package=" + package 
+                     + ";S.browser_fallback_url=" + encodedFallback
+                     + ";end";
+
+      addChromeLink(deeplink);
+    }
+
+    function handleAndroidStandardRedirect()
+    {
+      fallback = "https://play.google.com/store/apps/details?id=com.nike.plusgps";
+      var openFallback = function() { document.location = fallback; };
+
+      try {
+        document.location = link;
+      } 
+      catch(err) {
+        openFallback();
+      }
+
+      setTimeout(openFallback, 300);
+    }
+
+    function iOSUserAgent() 
+    {
+      var userAgent = navigator.userAgent;
+      return  userAgent.includes("iPhone") || 
+              userAgent.includes("iPad") || 
+              userAgent.includes("OS X");
+    }
+
+    function skipToAppStore()
+    {
+      var appStore = "https://itunes.apple.com/us/app/nike+-run-club/id387771637";
+      window.location = appStore;
+    }
+
+    function getCookie(cname) 
+    {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length,c.length);
+        }
+      }
+      return "";
+    }
+
+    function setCookie(cname, cvalue, exdays) 
+    {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function fuckingChromeUserAgent()
+    {
+      var userAgent = navigator.userAgent;
+      return userAgent.includes("Chrome/5") && userAgent.includes("Android");
+    }
+
+    function addChromeLink(deeplink)
+    {
+      var intentLink = document.createElement("a");
+      intentLink.innerHTML = "Click Here to Continue";
+      intentLink.href = deeplink;
+
+      var intentLinkContainer = document.createElement("div");
+      intentLinkContainer.id = "intentLinkContainer";
+      intentLinkContainer.appendChild(intentLink);
+
+      document.getElementById("message").style.display = "none";
+      document.body.appendChild(intentLinkContainer);
+    }
+
+  </script>
+  <style type="text/css">
+    #intentLinkContainer {
+      width: 60%;
+      height: 200px;
+      font-size: 10vw;
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    #message {
+      width: 80%;
+      text-align: center;
+      font-size: 10vw;
+      margin: 0 auto;
+    }
+
+    #errorMessage {
+      width: 80%;
+      height: 200px;
+      font-size: 7.3vw;
+      text-align: center;
+      margin: 35px auto;
+    }
+  </style>
+</head>
+<body>
+<div id="message">
+  Loading...
+</div>
+<div id="errorMessage" style="display: none;">
+  If you see an error, please wait 5 seconds and you will be redirected to the app store.
+</div>
+</body>
+</html>

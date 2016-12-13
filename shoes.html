@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    
+    var link = "nikedeeplinkdemo://shoes";
+    var fallback = "http://m.nike.com/us/en_us/pd/lunarepic-flyknit-womens-running-shoe/pid-11155465/pgid-11665601"
+    window.onload = loadPage;
+
+    function loadPage() 
+    {
+      if (fuckingChromeUserAgent()) {
+        handleAndroidChromeRedirect();
+        return;
+      }
+
+      var openFallback = (function() { 
+        window.open(fallback, '_self');
+      });
+
+      try {
+        if (iOSUserAgent()) {
+          document.getElementById("errorMessage").style.display = "block";
+          setTimeout(openFallback, 5000);
+        }
+        else {
+          setTimeout(openFallback, 300);
+        }
+
+        window.open(link, '_self');
+      } 
+      catch(err) {
+        openFallback()
+      }
+    }
+
+    function handleAndroidChromeRedirect()
+    {
+      var package = "com.chexology.nikedeeplinkdemo";
+      var scheme = "nikedeeplinkdemo";
+      var encodedFallback = encodeURIComponent(fallback);
+
+      var deeplink = "intent://shoes/#Intent;scheme=" + scheme 
+                     + ";package=" + package 
+                     + ";S.browser_fallback_url=" + encodedFallback
+                     + ";end";
+
+      addChromeLink(deeplink);
+    }
+
+    function iOSUserAgent() 
+    {
+      var userAgent = navigator.userAgent
+      return  userAgent.includes("iPhone") || 
+              userAgent.includes("iPad") || 
+              userAgent.includes("OS X")
+    }
+
+    function fuckingChromeUserAgent()
+    {
+      var userAgent = navigator.userAgent;
+      return userAgent.includes("Chrome/5") && userAgent.includes("Android");
+    }
+
+    function addChromeLink(deeplink)
+    {
+      var intentLink = document.createElement("a");
+      intentLink.innerHTML = "Click Here to Continue";
+      intentLink.href = deeplink;
+
+      var intentLinkContainer = document.createElement("div");
+      intentLinkContainer.id = "intentLinkContainer";
+      intentLinkContainer.appendChild(intentLink);
+
+      document.getElementById("message").style.display = "none";
+      document.body.appendChild(intentLinkContainer);
+    }
+
+  </script>
+  <style type="text/css">
+    #intentLinkContainer {
+      width: 60%;
+      height: 200px;
+      font-size: 10vw;
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    #message {
+      width: 80%;
+      text-align: center;
+      font-size: 10vw;
+      margin: 0 auto;
+    }
+
+    #errorMessage {
+      width: 80%;
+      height: 200px;
+      font-size: 7.5vw;
+      text-align: center;
+      margin: 35px auto;
+    }
+  </style>
+</head>
+<body>
+<div id="message">
+  Loading...
+</div>
+<div id="errorMessage" style="display: none;">
+  If you see an error, please wait 5 seconds and you will be redirected.
+</div>
+</body>
+</html>
