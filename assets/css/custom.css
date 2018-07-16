@@ -9,7 +9,6 @@
 #blurb {
   text-align: left;
   display: inline-block;
-  /*width: 172.2px;*/
   margin: 100px auto;
 }
 
@@ -21,8 +20,22 @@
   margin-left: 75px;
 }
 
-#dictionary {
-  width: 100%;
+@media screen and (max-width: 736px) {
+  #blurb-2 {
+    margin-left: 20px;
+  }
+
+  #blurb-3 {
+    margin-left: 48px;
+  }
+}
+
+#hire_me ul {
+  padding-left: 0.8em;
+}
+
+#hire_me li {
+  margin-left: 0.9em;
 }
 
 .features h3 {
@@ -39,6 +52,30 @@
 
 .features section {
   padding-left: 4em;
+}
+
+@media screen and (max-width: 736px) {
+  .features section {
+    padding-left: 1.5em;   
+  }
+
+  .features section h3 {
+    padding-left: 4em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .features .competency-group {
+    padding-top: 0;
+  }
+
+  .features section .icon {
+    top: 2em;
+  }
+
+  .features section h3 {
+    padding-left: 4em;
+  }
 }
 
 .indent {
@@ -83,6 +120,12 @@ li ul {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 480px) {
+  #trust-stats div {
+    width: 50%;
+  }
+}
+
 .attribution:before {
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
@@ -114,4 +157,8 @@ ul ul {
 #contact-info {
   padding-left: 1em;
   display: inline-block;
+}
+
+.no-bullet {
+  list-style-type: none;
 }

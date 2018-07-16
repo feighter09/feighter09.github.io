@@ -2219,7 +2219,7 @@ input, select, textarea {
 				.features section .icon {
 					left: 0;
 					position: relative;
-					top: 0;
+					margin-bottom: 0;
 				}
 
 		}
@@ -3869,14 +3869,6 @@ input, select, textarea {
 		#intro p {
 			font-size: 1.25em;
 		}
-
-			@media screen and (max-width: 980px) {
-
-				#intro p br {
-					display: none;
-				}
-
-			}
 
 			@media screen and (max-width: 736px) {
 
