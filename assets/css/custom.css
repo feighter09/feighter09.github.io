@@ -1,0 +1,117 @@
+.center {
+  text-align: center;
+}
+
+#intro .inner {
+  text-align: center;
+}
+
+#blurb {
+  text-align: left;
+  display: inline-block;
+  /*width: 172.2px;*/
+  margin: 100px auto;
+}
+
+#blurb-2 {
+  margin-left: 35px;
+}
+
+#blurb-3 {
+  margin-left: 75px;
+}
+
+#dictionary {
+  width: 100%;
+}
+
+.features h3 {
+  margin: 0 0 1.5em 0;
+}
+
+#beliefs section {
+  width: 100%;
+}
+
+.features h3 {
+  padding-left: 3em;
+}
+
+.features section {
+  padding-left: 4em;
+}
+
+.indent {
+  padding-left: 2em;
+}
+
+#beliefs p {
+  margin-bottom: 1em;
+}
+
+#beliefs blockquote {
+  margin-bottom: 1em;
+}
+
+#beliefs h3 {
+  padding-left: 0;
+}
+
+.footnote:before {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 90%;
+    border-top: solid 1px rgba(255, 255, 255, 0.15);
+}
+
+.footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+}
+
+.footnote span {
+  display: inline-block;
+  padding-top: 0.8em;
+  padding-left: 0.5em;
+}
+
+li ul {
+  margin-bottom: 0;
+}
+
+#trust-stats h1 {
+  margin-bottom: 0;
+}
+
+.attribution:before {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 50%;
+    border-top: solid 1px rgba(255, 255, 255, 0.15);
+}
+
+.attribution {
+  font-size: 0.8em;
+  padding-top: 1em;
+  line-height: 1.2em;
+}
+
+.attribution span {
+  display: inline-block;
+  padding-top: 0.8em;
+  padding-left: 0.5em;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+#contact {
+  padding-left: 1em;
+  display: inline-block;
+}
+
+#contact-info {
+  padding-left: 1em;
+  display: inline-block;
+}
